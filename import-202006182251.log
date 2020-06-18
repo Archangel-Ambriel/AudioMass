@@ -1,0 +1,62 @@
+*.tar
+*.tar.*
+*.jar
+*.exe
+*.msi
+*.zip
+*.tgz
+*.log
+*.log.*
+*.sig
+
+pkg/
+src/
+!/2.2.081.tar.gz
+
+!/40nuggets.0.6.8.zip
+
+!/acrobatproDC_gExQCM26RtGl5oThf9T_pw041d.exe
+
+!/Alexa LED Animation Files for AVS.zip
+
+!/Alexa-LED-Animation-Files-for-AVS-master.zip
+
+!/app center-201910240330.log
+
+!/app center-202005071535.log
+
+!/appcenter-cli-1.1.19.tar.gz
+
+!/application-check.zip
+
+!/ApplicationData.zip
+
+!/archlinux-2018.10.01-x86_64.iso 1.sig
+
+!/atlassian-universal-plugin-manager-plugin-4.0.7.jar
+
+!/atom-master.zip
+
+!/.github/License©️And informations.pdf.pages/*
+
+!/.github/acrobatproDC_gExQCM26RtGl5oThf9T_pw041d.exe
+
+!/.github/appcenter-cli-1.1.19.tar.gz
+
+!/.github/atlassian-universal-plugin-manager-plugin-4.0.7.jar
+
+!/.github/build-artifacts-darwin.zip
+
+!/.github/fortress-core-2.0.3.jar
+
+!/.github/git-credential-manager-2.0.4.jar
+
+!/.github/git-lfs-2.8.0.tar.gz
+
+!/.github/git-lfs-linux-amd64-v2.8.0.tar.gz
+
+!/.github/app center-202005071535.log
+
+!/objects-4c72cc4-2-8381c9654bc445a447e6587b9b6c3d56c43dd26c.zip
+
+!/import-202004301821.log
