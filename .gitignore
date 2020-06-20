@@ -61,3 +61,5 @@ src/
 
 !/import-202004301821.log
 
+!/src/dist/git.html
+

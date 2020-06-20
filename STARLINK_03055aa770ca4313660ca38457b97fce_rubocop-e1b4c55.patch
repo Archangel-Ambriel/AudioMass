@@ -1,0 +1,18 @@
+From e1b4c55d0bc25d6a4b7506794b881bba35669ba0 Mon Sep 17 00:00:00 2001
+From: ࿇ Ambjoern E.S.A <archangel.ambriel@icloud.com>
+Date: Sat, 20 Jun 2020 13:14:58 +0200
+Subject: [PATCH] STARLINK 03055aa770ca4313660ca38457b97fce rubocop
+
+---
+ QBNWh | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 QBNWh
+
+diff --git a/QBNWh b/QBNWh
+new file mode 100644
+index 0000000..e69de29
+--- /dev/null
++++ b/QBNWh
+--
+Working Copy 4.2.9
+
