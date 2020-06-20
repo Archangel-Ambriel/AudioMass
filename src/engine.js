@@ -143,8 +143,12 @@
 		};
 
 		this.LoadFile = function ( e ) {
-			if (e.files.length > 0) {
-				if (e.files[0].type == "audio/mp3" || e.files[0].type == "audio/wave"
+			if (e.files.length > 0)
+			{
+				if (e.files[0].type == "audio/mp3"
+					|| e.files[0].type == "audio/wave"
+					|| e.files[0].type == "audio/mpeg"
+					|| e.files[0].type == "audio/flac"
 					|| e.files[0].type == "audio/ogg")
 				{
 
@@ -215,7 +219,7 @@
 			}
 		};
 
-		this.DownloadFile = function ( name, kbps, selection, stereo ) {
+		this.DownloadFile = function ( name, format, kbps, selection, stereo ) {
 			if (!q.is_ready) return ;
 
 			app.fireEvent ('WillDownloadFile');
@@ -230,7 +234,7 @@
 			});
 
 			setTimeout(function() {
-				AudioUtils.DownloadFile ( name, kbps, selection, stereo, function ( val ) {
+				AudioUtils.DownloadFile ( name, format, kbps, selection, stereo, function ( val ) {
 					if (val === 'done')
 					{
 						setTimeout(function() { app.fireEvent ('DidDownloadFile'); }, 12);
@@ -666,7 +670,7 @@
 					input.setAttribute ('type', 'file');
 					input.setAttribute ('accept', 'audio/*');
 					input.className = 'pk_inpfile';
-					input.onchange = function () { 
+					input.onchange = function () {
 						q.LoadFile ( input );
 
 						input.parentNode.removeChild( input );
@@ -1067,7 +1071,12 @@
 
 		var _sk = false;
 		app.listenFor ('RequestActionRecordToggle', function () {
-			if (!q.is_ready) return ;
+			if (!q.is_ready) {
+				// if not ready then bring up the new recording toggle!
+				app.fireEvent('RequestActionNewRec');
+
+				return ;
+			}
 			
 			if (app.rec.isActive ()) {
 				app.fireEvent('RequestActionRecordStop');
@@ -1081,7 +1090,7 @@
 					setTimeout(function() {
 						_sk = false;
 					}, 50);
-				},40);
+				},26);
 			}
 		});
 
